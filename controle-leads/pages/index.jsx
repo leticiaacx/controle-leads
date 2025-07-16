@@ -1,3 +1,4 @@
+// pages/index.jsx
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -47,10 +48,10 @@ export default function LeadForm() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <h2 className="text-xl font-bold text-gray-800 text-center mb-2">Cadastro de Lead</h2>
-              <Input placeholder="Nome" name="nome" value={formData.nome} onChange={handleChange} required />
-              <Input placeholder="Email" name="email" type="email" value={formData.email} onChange={handleChange} />
-              <Input placeholder="Telefone" name="telefone" value={formData.telefone} onChange={handleChange} />
-              <Input placeholder="Origem (evento, anúncio, etc.)" name="origem" value={formData.origem} onChange={handleChange} />
+              <Input name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} required />
+              <Input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+              <Input name="telefone" placeholder="Telefone" value={formData.telefone} onChange={handleChange} />
+              <Input name="origem" placeholder="Origem (evento, anúncio, etc.)" value={formData.origem} onChange={handleChange} />
               <Button type="submit" className="w-full">Enviar</Button>
             </form>
           )}
