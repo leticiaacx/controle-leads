@@ -1,3 +1,4 @@
+// pages/api/leads.js
 export const config = {
   api: {
     bodyParser: true,
